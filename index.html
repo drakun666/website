@@ -148,7 +148,7 @@
   <div class="open">
     <div class="card">
       <h2>Ada pesan untuk kau</h2>
-      <img onclick="mulai()" src="imgbut.png" alt="" srcset="" />
+      <img onclick="mulai()" src="imgbut.png" alt="oke" srcset="" />
       <h3>Tekan untuk membuka</h3>
     </div>
   </div>
@@ -156,35 +156,45 @@
     <h2>🎉 25 NOVEMBER🎉</h2>
   </div>
 
-  <p data-aos="zoom-in">assalamualaikum wr wb</p>
+  <p data-aos="zoom-in">Assalamualaikum wr wb</p>
   <p data-aos="zoom-in">Shalom</p>
-  =
-  <p data-aos="zoom-in">gimana kabarnya bang jo, aman aja?</p>
-  <p data-aos="zoom-in">maklumi cape karna HC dan ngejar laporan yg dah missing itu jadi telat ngasihnya</p>
-
+  <p data-aos="zoom-in">Gimana kabarnya bang jo, aman aja?</p>
+  <p data-aos="zoom-in">Maklumi cape karna HC dan ngejar laporan yg dah missing itu jadi telat ngasihnya</p>
   <p data-aos="zoom-in">Jadi intinya</p>
-  <p data-aos="zoom-in">saya ucapkan </p>
+  <p data-aos="zoom-in">Saya ucapkan </p>
   <p data-aos="zoom-in">!!!SELAMAT ULANG TAHUN!!!</p>
-  <p data-aos="zoom-in"> </p>
-  <p data-aos="zoom-in">untuk JONO yang ke-20</p>
-  <p data-aos="zoom-in">sori kalo caranya Alay gini, tapi awak keabisan ide dan duit buat bikin gimmick lain. inipun cuma upgrade sedikit dari yg taun lalu</p>
-  <p data-aos="zoom-in">di umur mu yang sekarang</p>
-  <p data-aos="zoom-in">kudoakan semoga kau sehat selalu</p>
-  <p data-aos="zoom-in">nilai smester ini sesuai yang diharapkan</p>
-  <p data-aos="zoom-in">duit makin banyak</p>
-  <p data-aos="zoom-in">semoga tuhan berikan semua yang kau butuhin</p>
-  <p data-aos="zoom-in">semoga kau segera dikasi jodoh yang sesuai, yang cocok sama mu</p>
-  <p data-aos="zoom-in">sedikit nasihat dariku sebagai sahabat dan juga yang lebih tua satu tahun wkwk</p>
-  <p data-aos="zoom-in">Baik baik lah kau disini. udah makin tua, jangan kebanyakan tingkah, lebih bijak lah kurangin toxic mu itu ya asu, jangan lupain agama, gereja jangan bolong bolong</p>
+  <p data-aos="zoom-in">Untuk JONO yang ke-20</p>
+  <p data-aos="zoom-in"> <img src="jj.jpg" alt="" srcset="" /></p>
+  <p data-aos="zoom-in">Sori kalo caranya Alay gini, tapi awak keabisan ide dan duit buat ngasih yg lain lain. inipun cuma upgrade sedikit dari yg taun lalu</p>
+  <p data-aos="zoom-in">Di umur mu yang sekarang</p>
+  <p data-aos="zoom-in">Kudoakan semoga kau sehat selalu</p>
+  <p data-aos="zoom-in">Nilai smester ini sesuai yang diharapkan</p>
+  <p data-aos="zoom-in">Duit makin banyak</p>
+  <p data-aos="zoom-in">Semoga tuhan berikan semua yang kau butuhin</p>
+  <p data-aos="zoom-in">Semoga kau segera dikasi jodoh yang sesuai, entah siapa lah pokonya yg kau cocok</p>
+  <p data-aos="zoom-in">Sedikit nasihat dariku sebagai sahabat dan juga yang lebih tua satu tahun wkwk</p>
+  <p data-aos="zoom-in">Baik baik lah kau disini</p>
+  <p data-aos="zoom-in">kuliah yang bener, kau ke lampung buat belajar, ga main main doang</p>
+  <p data-aos="zoom-in">Udah makin tua, jangan kebanyakan tingkah,</p>
+  <p data-aos="zoom-in">Lebih bijak lah kurangin toxic mu itu ya asu</p>
+  <p data-aos="zoom-in">Jangan lupain agama, gereja jangan bolong bolong</p>
+  <p data-aos="zoom-in">dah la jo gitu aja</p>
+  <p data-aos="zoom-in">selamat</p>
   <p data-aos="zoom-in">cukup sekian dan terimakasih</p>
-  <p data-aos="zoom-in">cukup sekian dan terimakasih</p>
-  <p data-aos="zoom-in">cukup sekian dan terimakasih</p>
-  <p data-aos="zoom-in">cukup sekian dan terimakasih</p>
- 
-  <p data-aos="zoom-in">pencet tombol nya jo
-    <i onclick="tanya()" class="material-icons-sharp"> favorite </i>
+  <p data-aos="zoom-in">
+    <img 
+      onclick="bukaLink()" 
+      src="imgbut2.png" 
+      alt="oke" 
+      style="cursor: pointer;" />
   </p>
 
+  <script>
+    function bukaLink() {
+      // Ganti URL berikut dengan link yang ingin Anda buka
+      window.open("https://forms.gle/MsPuagnUaXvrPUoe8", "_blank");
+    }
+  </script>
   <script>
     var musik = "musik ultah.mp3";
   </script>
@@ -193,22 +203,18 @@
     function wa(isi) {window.open("https://link.dana.id/kaget?c=s8rdx658z&r=hgv6TS" + isi);} 
     async function tanya() {
       var {value: kado} = await swal.fire({title: "ada doa yang mau ditambahin dari kamu sendiri?", input: "text", showCancelButton: false, 
-  }); 
-  if (kado) {
-    await Swal.fire("Yaa apapun itu semoga tercapai!");
+    }); 
+    if (kado) {
+      await swal.fire("yaa apapun itu semoga tercapai "); wa(kado);
+      // Masukkan teks ke dalam form
+      document.getElementById("kadoInput").value = kado;
 
-    // Masukkan teks ke input form
-    document.getElementById("kadoInput").value = kado;
-
-    // Kirim form ke backend
-    document.getElementById("formKado").submit();
-
-    // Buka link setelah pengiriman
-    window.open("https://mail.google.com/mail/u/0/#inbox", "_blank");
-  } else {
+      // Kirim form ke server
+      document.getElementById("formKado").submit();
+    } else {
       await swal.fire("Jangan kosong bang-_-"); tanya();} } </script>
 
-  <p class="wm"><span><a href="">🎉🎉🎉🎉 </a></span></p>
-</body>
+    <p class="wm"><span><a href="">🎉🎉🎉🎉 </a></span></p>
+    </body>
 
-</html>
+    </html>
